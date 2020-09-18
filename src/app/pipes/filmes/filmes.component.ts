@@ -57,8 +57,6 @@ export class FilmesComponent implements OnInit {
       }
     ];
 
-    console.log(this.filmes)
-
     this.mapped = this.filmes.map(filme => {
       return {
         nome: filme.nome,
@@ -66,7 +64,7 @@ export class FilmesComponent implements OnInit {
         valor: filme.valor,
         tamanho: filme.tamanho,
         imagem: this.imageFormatPipe.transform(filme.imagem, 'default', true),
-      }
+      };
     });
   }
 

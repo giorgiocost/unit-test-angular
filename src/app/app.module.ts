@@ -9,14 +9,14 @@ import { FileSizePipe } from './pipes/filmes/file-size.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    FilmesComponent
+    FilmesComponent,
+    FileSizePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    FileSizePipe,
   ],
   bootstrap: [AppComponent]
 })

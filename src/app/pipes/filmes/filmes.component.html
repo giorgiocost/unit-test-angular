@@ -1,15 +1,15 @@
-<div class="container main-container">
+<div>
 
     <h1>Filmes</h1>
 
-    <table class="table">
-        <thead class="thead-dark">
+    <table>
+        <thead>
             <tr>
-                <th scope="col"></th>
-                <th scope="col">Nome</th>
-                <th scope="col">Data Lançamento</th>
-                <th scope="col">Valor</th>
-                <th scope="col">Tamanho Arquivo</th>
+                <th></th>
+                <th>Nome</th>
+                <th>Data Lançamento</th>
+                <th>Valor</th>
+                <th>Tamanho Arquivo</th>
             </tr>
         </thead>
         <tbody>
@@ -17,8 +17,8 @@
                 <img [src]="filme?.imagem" style="padding-bottom: 5px;">
                 <td>{{ filme.nome | titlecase }}</td>
                 <td>{{ filme.dataLancamento | date:"dd/MM/yyyy" }}</td>
-                <td>{{ filme.valor }}</td>
-                <td>{{ filme.tamanho }}</td>
+                <td>{{ filme.valor}}</td>
+                <td>{{ filme.tamanho | fileSize }}</td>
             </tr>
         </tbody>
     </table>
