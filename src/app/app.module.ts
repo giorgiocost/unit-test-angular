@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FilmesComponent } from './pipes/filmes/filmes.component';
 import { FileSizePipe } from './pipes/filmes/file-size.pipe';
+import { ContadorComponent } from './components/contador/contator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmesComponent,
-    FileSizePipe
+    FileSizePipe,
+    ContadorComponent,
   ],
   imports: [
     BrowserModule,
