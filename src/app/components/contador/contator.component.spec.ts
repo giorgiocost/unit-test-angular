@@ -19,4 +19,28 @@ describe('ContadorComponent', () => {
     component.incrementar();
     expect(component.valor).toBe(1);
   });
+
+  it('deve decrementar corretamente', () => {
+    component.incrementar();
+    expect(component.valor).toBe(1);
+    component.decrementar();
+    expect(component.valor).toBe(0);
+  });
+
+  it('deve decrementar abaixo do valor permitido', () => {
+    component.incrementar();
+    expect(component.valor).toBe(1);
+    component.decrementar();
+    expect(component.valor).toBe(0);
+    component.decrementar();
+    expect(component.valor).toBe(0);
+  });
+
+  it('deve decrementar abaixo do valor permitido', () => {
+    for ( let i = 0 ; i < 102 ; i ++) {
+      component.incrementar();
+    }
+
+    expect(component.valor).toBe(100);
+  });
 });
